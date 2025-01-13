@@ -3,7 +3,7 @@
     "description": "Khophim8k crawler",
     "type": "package",
     "require": {
-         "khophim8k/kho8k-core": "^2.0",
+         "khophim8k/kho8k-core": "*",
         "intervention/image": "^2.7"
     },
     "license": "MIT",
