@@ -3,7 +3,7 @@
 @php
     $defaultBreadcrumbs = [
         trans('backpack::crud.admin') => backpack_url('dashboard'),
-        'Crawler Kho8k' => backpack_url('plugin/khophim8k-crawler'),
+        'Crawler Kho8k' => backpack_url('plugin/khophim8k-crawler-fakerview'),
     ];
 
     $breadcrumbs = $breadcrumbs ?? $defaultBreadcrumbs;
@@ -294,7 +294,7 @@
 
             const fetchApi = async (link, from, to) => {
                 isFetching = true;
-                const response = await fetch("{{ backpack_url('plugin/khophim8k-crawler/fetch') }}?" +
+                const response = await fetch("{{ backpack_url('plugin/khophim8k-crawler-fakerview/fetch') }}?" +
                     new URLSearchParams({
                         link,
                         from,
@@ -508,7 +508,7 @@
             const excludedRegions = $("[name='excludedRegions[]']").val()
             const excludedType = $("[name='excludedType[]']").val()
             const forceUpdate = ($("[name='force_update']").prop('checked') == true) ? true : false;
-            const response = await fetch("{{ backpack_url('plugin/khophim8k-crawler/crawl') }}", {
+            const response = await fetch("{{ backpack_url('plugin/khophim8k-crawler-fakerview/crawl') }}", {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",

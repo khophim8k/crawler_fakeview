@@ -1,6 +1,6 @@
 <?php
 
-namespace Kho8k\Crawler\Kho8kCrawler;
+namespace Kho8k\Crawler\Kho8kCrawlerFakeView;
 
 use Illuminate\Support\Facades\Log;
 use Intervention\Image\ImageManagerStatic as Image;

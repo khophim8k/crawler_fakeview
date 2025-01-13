@@ -1,13 +1,13 @@
 <?php
 
-namespace Kho8k\Crawler\Kho8kCrawler\Controllers;
+namespace Kho8k\Crawler\Kho8kCrawlerFakeView\Controllers;
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\Settings\app\Models\Setting;
 use Illuminate\Support\Facades\Route;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 use Illuminate\Http\Request;
-use Kho8k\Crawler\Kho8kCrawler\Option;
+use Kho8k\Crawler\Kho8kCrawlerFakeView\Option;
 use Prologue\Alerts\Facades\Alert;
 
 class CrawlerSettingController extends CrudController
@@ -22,7 +22,7 @@ class CrawlerSettingController extends CrudController
     public function setup()
     {
         CRUD::setModel(Setting::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/plugin/khophim8k-crawler/options');
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/plugin/khophim8k-crawler-fakerview/options');
         CRUD::setEntityNameStrings('crawler options', 'crawler options');
     }
 
@@ -59,7 +59,7 @@ class CrawlerSettingController extends CrudController
 
         $this->data['saveAction'] = $this->crud->getSaveAction();
 
-        return view('khophim8k-crawler::options', $this->data);
+        return view('khophim8k-crawler-fakerview::options', $this->data);
     }
 
     /**

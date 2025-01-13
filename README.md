@@ -14,10 +14,10 @@
 https://github.com/khophim8k/ophim-core
 
 ## Install
-- Tại thư mục của Project: `composer require khophim8k/khophim8k-crawler`
+- Tại thư mục của Project: `composer require khophim8k/khophim8k-crawler-fakerview`
 
 ## Update
-- Tại thư mục của Project: `composer update khophim8k/khophim8k-crawler`
+- Tại thư mục của Project: `composer update khophim8k/khophim8k-crawler-fakerview`
 
 ## Setup Crontab
 [Setup crontab, add this entry](https://github.com/khophim8k/ophim-core#reset-view-counter)

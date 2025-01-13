@@ -1,12 +1,12 @@
 <?php
 
-namespace Kho8k\Crawler\Kho8kCrawler\Console;
+namespace Kho8k\Crawler\Kho8kCrawlerFakeView\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Http;
-use Kho8k\Crawler\Kho8kCrawler\Crawler;
-use Kho8k\Crawler\Kho8kCrawler\Option;
+use Kho8k\Crawler\Kho8kCrawlerFakeView\Crawler;
+use Kho8k\Crawler\Kho8kCrawlerFakeView\Option;
 
 class CrawlerScheduleCommand extends Command
 {
@@ -15,7 +15,7 @@ class CrawlerScheduleCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'kho8k:plugins:khophim8k-crawler:schedule';
+    protected $signature = 'kho8k:plugins:khophim8k-crawler-fakerview:schedule';
 
     /**
      * The console command description.
@@ -32,7 +32,7 @@ class CrawlerScheduleCommand extends Command
      */
     public function __construct()
     {
-        $this->logger = Log::channel('khophim8k-crawler');
+        $this->logger = Log::channel('khophim8k-crawler-fakerview');
         parent::__construct();
     }
 

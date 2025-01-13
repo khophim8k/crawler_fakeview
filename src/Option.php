@@ -1,6 +1,6 @@
 <?php
 
-namespace Kho8k\Crawler\Kho8kCrawler;
+namespace Kho8k\Crawler\Kho8kCrawlerFakeView;
 
 use Backpack\Settings\app\Models\Setting;
 use Illuminate\Support\Facades\Cache;
@@ -28,7 +28,7 @@ class Option
     //     $options[$name] = $value;
 
     //     return Setting::updateOrCreate([
-    //         'key' => 'khophim8k/khophim8k-crawler.options',
+    //         'key' => 'khophim8k/khophim8k-crawler-fakerview.options',
     //     ], [
     //         'name' => 'Options',
     //         'field' => json_encode(['name' => 'value', 'type', 'hidden']),
@@ -41,7 +41,7 @@ class Option
     public static function getEntry()
     {
         return Setting::firstOrCreate([
-            'key' => 'khophim8k/khophim8k-crawler.options',
+            'key' => 'khophim8k/khophim8k-crawler-fakerview.options',
         ], [
             'name' => 'Options',
             'field' => json_encode(['name' => 'value', 'type', 'hidden']),

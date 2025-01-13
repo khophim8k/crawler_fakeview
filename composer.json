@@ -1,5 +1,5 @@
 {
-    "name": "khophim8k/khophim8k-crawler",
+    "name": "khophim8k/khophim8k-crawler-fakerview",
     "description": "Khophim8k crawler",
     "type": "package",
     "require": {
@@ -9,7 +9,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Kho8k\\Crawler\\Kho8kCrawler\\": "src/"
+            "Kho8k\\Crawler\\Kho8kCrawlerFakeView\\": "src/"
         }
     },
     "authors": [
@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kho8k\\Crawler\\Kho8kCrawler\\Kho8kCrawlerServiceProvider"
+                "Kho8k\\Crawler\\Kho8kCrawlerFakeView\\Kho8kCrawlerFakeViewServiceProvider"
             ]
         }
     },

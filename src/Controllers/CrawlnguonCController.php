@@ -1,18 +1,18 @@
 <?php
 
-namespace Kho8k\Crawler\Kho8kCrawler\Controllers;
+namespace Kho8k\Crawler\Kho8kCrawlerFakeView\Controllers;
 
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
-use Kho8k\Crawler\Kho8kCrawler\CrawlernguonC;
+use Kho8k\Crawler\Kho8kCrawlerFakeView\CrawlernguonC;
 use Kho8k\Core\Models\Movie;
 
 /**
  * Class CrawlController
- * @package Kho8k\Crawler\Kho8kCrawler\Controllers
+ * @package Kho8k\Crawler\Kho8kCrawlerFakeView\Controllers
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
 class CrawlnguonCController extends CrudController
@@ -180,7 +180,7 @@ class CrawlnguonCController extends CrudController
 
         $fields = $this->movieUpdateOptions();
 
-        return view('khophim8k-crawler::crawlc', compact('fields', 'regions', 'categories'));
+        return view('khophim8k-crawler-fakerview::crawlc', compact('fields', 'regions', 'categories'));
     }
     // End ShowCrawlPage Nguonc
 

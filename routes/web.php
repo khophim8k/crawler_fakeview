@@ -14,15 +14,15 @@ Route::group([
         (array) config('backpack.base.web_middleware', 'web'),
         (array) config('backpack.base.middleware_key', 'admin')
     ),
-    'namespace'  => 'Kho8k\Crawler\Kho8kCrawler\Controllers',   
+    'namespace'  => 'Kho8k\Crawler\Kho8kCrawlerFakeView\Controllers',   
 ], function () {
-    Route::get('/plugin/khophim8k-crawler', 'CrawlController@showCrawlPage');
-    Route::get('/plugin/khophim8k-crawler/options', 'CrawlerSettingController@editOptions');
-    Route::put('/plugin/khophim8k-crawler/options', 'CrawlerSettingController@updateOptions');
-    Route::get('/plugin/khophim8k-crawler/fetch', 'CrawlController@fetch');
-    Route::post('/plugin/khophim8k-crawler/crawl', 'CrawlController@crawl');
-    Route::post('/plugin/khophim8k-crawler/get-all-movies', 'CrawlController@getAllMovies');
-    Route::post('/plugin/khophim8k-crawler/get-movies', 'CrawlController@getMoviesFromParams');
+    Route::get('/plugin/khophim8k-crawler-fakerview', 'CrawlController@showCrawlPage');
+    Route::get('/plugin/khophim8k-crawler-fakerview/options', 'CrawlerSettingController@editOptions');
+    Route::put('/plugin/khophim8k-crawler-fakerview/options', 'CrawlerSettingController@updateOptions');
+    Route::get('/plugin/khophim8k-crawler-fakerview/fetch', 'CrawlController@fetch');
+    Route::post('/plugin/khophim8k-crawler-fakerview/crawl', 'CrawlController@crawl');
+    Route::post('/plugin/khophim8k-crawler-fakerview/get-all-movies', 'CrawlController@getAllMovies');
+    Route::post('/plugin/khophim8k-crawler-fakerview/get-movies', 'CrawlController@getMoviesFromParams');
 
     Route::get('/plugin/kkphim-crawler', 'CrawlkkController@showCrawlPage');
     Route::get('/plugin/kkphim-crawler/options', 'CrawlerSettingController@editOptions');

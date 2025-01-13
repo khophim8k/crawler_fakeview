@@ -1,18 +1,18 @@
 <?php
 
-namespace Kho8k\Crawler\Kho8kCrawler\Controllers;
+namespace Kho8k\Crawler\Kho8kCrawlerFakeView\Controllers;
 
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
-use Kho8k\Crawler\Kho8kCrawler\CrawlerO;
+use Kho8k\Crawler\Kho8kCrawlerFakeView\CrawlerO;
 use Kho8k\Core\Models\Movie;
 
 /**
  * Class CrawlController
- * @package Kho8k\Crawler\Kho8kCrawler\Controllers
+ * @package Kho8k\Crawler\Kho8kCrawlerFakeView\Controllers
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
 class CrawlOController extends CrudController
@@ -67,7 +67,7 @@ class CrawlOController extends CrudController
 
         $fields = $this->movieUpdateOptions();
 
-        return view('khophim8k-crawler::crawlo', compact('fields', 'regions', 'categories'));
+        return view('khophim8k-crawler-fakerview::crawlo', compact('fields', 'regions', 'categories'));
     }
 
     public function crawl(Request $request)

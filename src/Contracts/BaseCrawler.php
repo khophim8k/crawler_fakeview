@@ -1,6 +1,6 @@
 <?php
 
-namespace Kho8k\Crawler\Kho8kCrawler\Contracts;
+namespace Kho8k\Crawler\Kho8kCrawlerFakeView\Contracts;
 
 abstract class BaseCrawler
 {

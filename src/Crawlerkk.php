@@ -1,6 +1,6 @@
 <?php
 
-namespace Kho8k\Crawler\Kho8kCrawler;
+namespace Kho8k\Crawler\Kho8kCrawlerFakeView;
 
 use Kho8k\Core\Models\Movie;
 use Illuminate\Support\Str;
@@ -12,7 +12,7 @@ use Kho8k\Core\Models\Region;
 use Kho8k\Core\Models\Tag;
 use Illuminate\Support\Facades\Log;
 
-use Kho8k\Crawler\Kho8kCrawler\Contracts\BaseCrawler;
+use Kho8k\Crawler\Kho8kCrawlerFakeView\Contracts\BaseCrawler;
 
 
 class Crawlerkk extends BaseCrawler
