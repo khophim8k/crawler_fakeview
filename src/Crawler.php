@@ -42,7 +42,7 @@ class Crawler extends BaseCrawler
         } else {
             $movie = Movie::create(array_merge($info, [
                 'update_handler' => static::class,
-                'update_identity' => $payload['movie']['_id'],
+                'update_identity' => $payload['movie']['id'],
                 'update_checksum' => md5($body),
                 'view_total' => rand(100000, 500000), // Thêm giá trị random cho view_total
             ]));
