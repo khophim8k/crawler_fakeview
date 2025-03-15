@@ -35,18 +35,8 @@
                                 </select>
                                 <button class="btn btn-sm btn-primary" id="movies-get-handle">Lấy danh sách</button>
                             </div>
-                            <textarea class="form-control" rows="5" name="link">https://apii.online/apii/danh-sach/phim-moi-cap-nhat</textarea>
+                            <textarea class="form-control" rows="5" name="link">https://travelnow.us.com/api/teamall/phimxxx/moi-cap-nhat</textarea>
                             <small><i>Mỗi link cách nhau 1 dòng</i></small>
-                        </div>
-                        <div class="form-group col-12">
-                            <label class="text-danger">Loại trừ định dạng</label>
-                            <button id="excluded-all-type" type="button" class="btn btn-sm btn-info">All</button>
-                            <select id="excluded-type" class="form-control select2" name="excludedType[]" multiple>
-                                <option value="series">Phim Bộ</option>
-                                <option value="single">Phim Lẻ</option>
-                                <option value="hoathinh">Hoạt Hình</option>
-                                <option value="tvshows">TV Shows</option>
-                            </select>
                         </div>
                         <div class="form-group col-12">
                             <label class="text-danger">Loại trừ thể loại</label>
@@ -75,17 +65,17 @@
                                 </div>
                                 <div class="form-group col-3">
                                     <label>Tới page</label>
-                                    <input type="number" class="form-control" name="to" min="0" value="1">
+                                    <input type="number" class="form-control" name="to" min="0" value="2">
                                 </div>
                                 <div class="col-6">
                                     <div class="row">
                                         <div class="form-group col-6">
                                             <label>Chờ crawl từ (ms)</label>
-                                            <input type="number" class="form-control" name="timeout_from" value="">
+                                            <input type="number" class="form-control" name="timeout_from" value="1">
                                         </div>
                                         <div class="form-group col-6">
                                             <label>đến (ms)</label>
-                                            <input type="number" class="form-control" name="timeout_to" value="">
+                                            <input type="number" class="form-control" name="timeout_to" value="3">
                                         </div>
                                     </div>
                                 </div>
@@ -242,9 +232,9 @@
                     "change");
 
                 let timeout_from = (localStorage.getItem("timeout_from")) ? localStorage.getItem(
-                    "timeout_from") : 1000;
+                    "timeout_from") : 1;
                 let timeout_to = (localStorage.getItem("timeout_to")) ? localStorage.getItem(
-                    "timeout_to") : 3000;
+                    "timeout_to") : 3;
                 $("input[name=timeout_from]").val(timeout_from);
                 $("input[name=timeout_to]").val(timeout_to);
 

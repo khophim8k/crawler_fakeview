@@ -108,6 +108,8 @@ class Option
                 'name' => 'download_image',
                 'label' => 'Tải ảnh khi crawl',
                 'type' => 'checkbox',
+                'value' => 1,
+                'default' => 1,
                 'tab' => 'Image Optimize'
             ],
             'should_resize_thumb' => [

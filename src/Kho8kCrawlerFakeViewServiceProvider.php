@@ -30,7 +30,7 @@ class Kho8kCrawlerFakeViewServiceProvider extends SP
                 'icon' => 'lab la-grav',
                 'entries' => [
                     ['name' => 'Xvnapi Crawler', 'icon' => 'lab la-cloudscale', 'url' => backpack_url('/plugin/khophim8k-crawler-fakerview')],
-                    ['name' => 'Apii Crawler', 'icon' => 'lab la-cloudscale', 'url' => backpack_url('/plugin/apii-crawler')],
+                    ['name' => 'Kho8k Crawler', 'icon' => 'lab la-cloudscale', 'url' => backpack_url('/plugin/apii-crawler')],
                     ['name' => 'Kkphim Crawler', 'icon' => 'lab la-cloudscale', 'url' => backpack_url('/plugin/kkphim-crawler')],
                     ['name' => 'Ophim Crawler', 'icon' => 'lab la-cloudscale', 'url' => backpack_url('/plugin/ophim-crawler')],
                     ['name' => 'NguonC Crawler', 'icon' => 'lab la-cloudscale', 'url' => backpack_url('/plugin/nguonc-crawler')],

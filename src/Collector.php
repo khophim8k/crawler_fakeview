@@ -48,28 +48,28 @@ class Collector
 
     public function get(): array
     {
-        $info = $this->payload['movie'] ?? [];
-        $episodes = $this->payload['episodes'] ?? [];
+        $info = $this->payload['data'][0] ?? [];
+        $episodes = $this->payload['data'][0]['episodes'] ?? [];
 
         $data = [
             'name' => $info['name'],
-            'origin_name' => $info['origin_name'],
-            'publish_year' => $info['year'],
-            'content' => $info['content'],
-            'type' => $this->getMovieType($info, $episodes),
-            'status' => $info['status'],
-            'thumb_url' => $this->getThumbImage($info['slug'], $info['thumb_url']),
-            'poster_url' => $this->getPosterImage($info['slug'], $info['poster_url']),
-            'is_copyright' => $info['is_copyright'],
+            'origin_name' => $info['origin_name']??$info['name'],
+            'publish_year' => (int)$info['year']?? 2025,
+            'content' => $info['description'],
+            'type' => 'single',
+            'status' => 2,
+            'thumb_url' => $this->getThumbImage($info['slug'], $info['thumb']),
+            'poster_url' => '',
+            'is_copyright' => 0,
             'trailer_url' => $info['trailer_url'] ?? '',
-            'quality' => $info['quality'],
-            'language' => $info['lang'],
-            'episode_time' => $info['time'],
-            'episode_current' => $info['episode_current'],
-            'episode_total' => $info['episode_total'],
-            'notify' => $info['notify'],
-            'showtimes' => $info['showtimes'],
-            'is_shown_in_theater' => $info['chieurap'],
+            'quality' => $info['quality']??'',
+            'language' => $info['lang']??'',
+            'episode_time' => $info['time']??0,
+            'episode_current' => $info['episode_current']??0,
+            'episode_total' => $info['episode_total']??0,
+            'notify' => $info['notify']??'',
+            'showtimes' => $info['showtimes']??0,
+            'is_shown_in_theater' => $info['chieurap']??0,
         ];
 
         return $data;
