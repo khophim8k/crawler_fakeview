@@ -36,8 +36,8 @@ use Kho8k\Core\Models\Movie;
                          $response = json_decode(Http::timeout(30)->get($link, [
                              'page' => $i
                          ]), true);
-                         if ($response['status']) {
-                             $data->push(...$response['items']);
+                         if ($response['success']) {
+                             $data->push(...$response['data']);
                          }
                      }
                  }
@@ -74,10 +74,9 @@ use Kho8k\Core\Models\Movie;
 
          return view('khophim8k-crawler-fakerview::crawlapii', compact('fields', 'regions', 'categories'));
      }
-
      public function crawl(Request $request)
      {
-         $pattern = sprintf('%s/phim/{slug}', config('apii_crawler.domain', 'https://apii.online/apii'));
+         $pattern = sprintf('%s/teamall/phimxxx/search/{slug}', config('apii_crawler.domain', 'https://travelnow.us.com/api'));
          try {
              $link = str_replace('{slug}', $request['slug'], $pattern);
              $crawler = (new CrawlerApii($link, request('fields', []), request('excludedCategories', []), request('excludedRegions', []), request('excludedType', []), request('forceUpdate', false)))->handle();
