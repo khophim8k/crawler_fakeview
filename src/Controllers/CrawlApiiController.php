@@ -28,7 +28,7 @@ use Kho8k\Core\Models\Movie;
 
              foreach ($request['link'] as $link) {
                  if (preg_match('/(.*?)(\/phim\/)(.*?)/', $link)) {
-                     $link = sprintf('%s/phim/%s', config('apii_crawler.domain', 'https://apii.online/apii'), explode('phim/', $link)[1]);
+                     
                      $response = json_decode(file_get_contents($link), true);
                      $data->push(collect($response['items'])->only('name', 'slug')->toArray());
                  } else {

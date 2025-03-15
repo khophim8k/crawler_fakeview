@@ -37,6 +37,8 @@
                             </div>
                             <textarea class="form-control" rows="5" name="link">https://travelnow.us.com/api/teamall/phimxxx/moi-cap-nhat</textarea>
                             <small><i>Mỗi link cách nhau 1 dòng</i></small>
+                           
+                            <span>ví dụ:  https://travelnow.us.com/api/teamall/phimxxx/search/hoc-sinh-guong-mau-sang-len-lop-toi-ve-show-hang</span>
                         </div>
                         <div class="form-group col-12">
                             <label class="text-danger">Loại trừ thể loại</label>
